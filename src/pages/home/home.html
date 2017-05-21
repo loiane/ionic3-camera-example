@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+
+    <button ion-button icon-right (click)="onTakePicture()">
+      Take Picture <ion-icon name="camera"></ion-icon>
+    </button>
+
+    <img *ngIf="image"
+      [src]="domSanitizer.bypassSecurityTrustUrl(image)" />
+
+  </ion-card-content>
+</ion-card>
+</ion-content>
